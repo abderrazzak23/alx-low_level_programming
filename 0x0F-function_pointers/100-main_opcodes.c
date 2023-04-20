@@ -1,34 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-    // Check that there is exactly one command-line argument
-    if (argc != 2) {
-        printf("Error\n");
-        exit(1);
-    }
+/**
+ * main - Entry point of the program
+ * @argc: The number of command-line arguments
+ * @argv: An array of strings containing the command-line arguments
+ *
+ * Return: Always 0
+ */
+int main(int argc, char *argv[])
+{
+	char *opc = (char *)main;
+	int i, nbytes;
 
-    // Convert the command-line argument to an integer
-    int nbytes = atoi(argv[1]);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
 
-    // Check that the integer is non-negative
-    if (nbytes < 0) {
-        printf("Error\n");
-        exit(2);
-    }
+	nbytes = atoi(argv[1]);
 
-    // Treat the address of the main function as a character pointer
-    char *opc = (char *) main;
+	if (nbytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
 
-    // Print the hexadecimal representation of the memory bytes
-    for (int i = 0; i < nbytes; i++) {
-        printf("%02x", opc[i] & 0xFF);
-        if (i != nbytes - 1) {
-            printf(" ");
-        }
-    }
+	for (i = 0; i < nbytes; i++)
+	{
+		printf("%02x", opc[i] & 0xFF);
+		if (i != nbytes - 1)
+			printf(" ");
+	}
 
-    printf("\n");
-    return 0;
+	printf("\n");
+	return (0);
 }
 
