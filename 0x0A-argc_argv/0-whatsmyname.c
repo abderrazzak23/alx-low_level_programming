@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * main - function that print the file name
@@ -7,7 +8,6 @@
  * @argv: an array of  pointers to the stirngs
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	if (argc > 0)
