@@ -8,7 +8,7 @@
  * Return: void.
  */
 void print_dog(struct dog *d)
-{i
+{
 	if (d)
 	{
 		prinft("Name: %s\n", d->name ? d->name : "(nil)");
