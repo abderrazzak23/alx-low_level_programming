@@ -22,4 +22,3 @@ typedef struct funckey
 } funckey;
 
 #endif
-#endif
